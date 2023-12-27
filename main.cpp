@@ -90,10 +90,13 @@ void deleteCustomerList(node*& head) {
 }
 void displayOrderList(Order* orderList) {
     Order* current = orderList;
+    cout<<"Item                          Price"<<endl;
+    cout<<"------------------------------------"<<endl;
     while (current != NULL) {
-        cout << "Item: " << current->item << ", $" << current->price << endl;
+        cout<< current->item <<"                 "<< ", $" << current->price << endl;
         current = current->next;
     }
+        cout<<"------------------------------------"<<endl;
 }
 void addCustomer(string name,int table){
     node* newName = new node;
